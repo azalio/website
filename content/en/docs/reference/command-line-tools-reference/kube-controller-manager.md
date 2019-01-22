@@ -177,7 +177,7 @@ kube-controller-manager [flags]
     <tr>
       <td></td><td style="line-height: 130%; word-wrap: break-word;">Filename containing a PEM-encoded X509 CA certificate used to issue cluster-scoped certificates</td>
     </tr>
-
+    
     <tr>
       <td colspan="2">--cluster-signing-key-file string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: "/etc/kubernetes/ca/ca.key"</td>
     </tr>
@@ -393,6 +393,13 @@ kube-controller-manager [flags]
     </tr>
     <tr>
       <td></td><td style="line-height: 130%; word-wrap: break-word;">The minimum change (from 1.0) in the desired-to-actual metrics ratio for the horizontal pod autoscaler to consider scaling.</td>
+    </tr>
+
+    <tr>
+      <td colspan="2">--horizontal-pod-autoscaler-use-rest-clients Default: true</td>
+    </tr>
+    <tr>
+      <td></td><td style="line-height: 130%; word-wrap: break-word;">If set to true, causes the horizontal pod autoscaler controller to use REST clients through the kube-aggregator, instead of using the legacy metrics client through the API server proxy.  This is required for custom metrics support in the horizontal pod autoscaler.</td>
     </tr>
 
     <tr>
